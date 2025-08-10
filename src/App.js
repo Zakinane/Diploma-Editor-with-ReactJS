@@ -48,7 +48,7 @@ function App() {
   };
 
   const generateNextDiploma = () => {
-    if (progress.done >= names.length) {
+    if (progress.done + 1 >= names.length) {
       alert("Tous les diplômes ont été générés !");
       return;
     }
@@ -62,9 +62,9 @@ function App() {
     img.onload = () => {
       canvas.width = img.width;
       canvas.height = img.height;
-      
+
       ctx.drawImage(img, 0, 0);
-      
+
       ctx.textBaseline = "top";
       ctx.font = `${textSettings.italic ? "italic " : ""}${
         textSettings.bold ? "bold " : ""
@@ -83,7 +83,16 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Image Editor by Zak</h1>
+      <h1>
+        Diploma Editor by{" "}
+        <a
+          href="https://github.com/Zakinane/Diploma-Editor-with-ReactJS"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Zak
+        </a>
+      </h1>
 
       <ImageUploader
         onImageUpload={handleImageUpload}

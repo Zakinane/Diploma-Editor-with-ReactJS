@@ -6,7 +6,7 @@ function ImageEditor({ settings, setSettings, maxX, maxY }) {
   };
 
   return (
-    <div style={{ marginTop: "20px"}}>
+    <div className="image-editor">
       <h3>Éditeur de texte</h3>
       <label>
         X:
@@ -54,6 +54,7 @@ function ImageEditor({ settings, setSettings, maxX, maxY }) {
           <option>Times New Roman</option>
           <option>Verdana</option>
           <option>Georgia</option>
+          {/* Ajouter avec file later*/}
         </select>
       </label>
       <label>
